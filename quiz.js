@@ -87,7 +87,7 @@ const comm = document.querySelector('#comm')
 
 let count = 0
 
-alert('If you want to try your hand at another quiz while one is in progress, you must click the "RESTART" button or refresh the page, but you will lose the progress of the current one. Click OK and start the quiz.')
+alert('If you want to try your hand at another quiz while one is in progress, you must click the "RESTART" button or refresh the page, but you will lose the progress of the current one. Click OK and choose one of the four quizzes you want to start.')
 
 function history(){
 
