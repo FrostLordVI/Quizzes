@@ -1,0 +1,313 @@
+body{
+    padding: 0;
+    margin: 0;
+    color: wheat;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    max-width: 100vw;
+    overflow-x: hidden;
+    width: 100vw;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+body.sport{
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 1, 12);
+}
+body.nature{
+    color: rgb(87, 185, 95);
+    background-color: rgb(0, 0, 0);
+}
+body.geography{
+    color: rgb(182, 182, 182);
+    background-color: rgb(10, 5, 0);
+}
+h1{
+    font-size: 50px;
+}
+h2{
+    font-size: 30px;
+}
+#options{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.option{
+    cursor: pointer;
+}
+
+
+div.choosen h3{
+    opacity: 1;
+    border-bottom: 2px solid;
+}
+h3{
+    opacity: .5;
+    font-size: 30px;
+    border-bottom: 2px solid transparent;
+    padding: 5px;
+}
+h3:hover{
+    opacity: 1;
+}
+.answers{
+    display:flex;
+    justify-content: space-around;
+}
+.answer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 12px;
+    padding: 25px;
+    background-color:rgba(94, 78, 57, 0.205);
+    height:100px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.answer.sport{
+    background-color: rgb(0, 16, 41);
+}
+.answer.nature{
+    background-color: rgb(1, 22, 13);
+}
+.answer.geography{
+    background-color: rgb(19, 16, 12);
+}
+.answer:hover{
+    background-color:rgba(94, 78, 57, 0.603);
+}
+.answer:hover.sport{
+    background-color: rgb(0, 30, 65);
+    color: rgb(180, 191, 255);
+}
+.answer:hover.nature{
+    background-color: rgb(0, 68, 40);
+    color: rgb(135, 250, 170);
+}
+.answer:hover.geography{
+    background-color: rgb(97, 83, 55);
+    color: rgb(228, 226, 223);
+}
+.answer:hover h5{
+    color: rgb(255, 178, 36);
+}
+.answer:hover.sport h5{
+    color: rgb(180, 185, 255);
+}
+.answer:hover.nature h5{
+    color: rgb(135, 250, 170);   
+}
+.answer:hover.geography h5{
+    color: rgb(255, 229, 177);   
+}
+h5{
+    font-size: 30px;
+    border:3px solid;
+    border-radius: 50px;
+    min-width: 35px;
+    margin-right: 5px;
+    margin-top: -100px;
+    margin-left: -45px;
+    background-color: rgb(48, 40, 30); 
+}
+.sport h5{
+    background-color: rgb(0, 30, 65)
+}
+.nature h5{
+    background-color: rgb(0, 34, 13)
+}
+.geography h5{
+    background-color: rgb(24, 24, 24)
+}
+p{
+    font-size: 25px;
+}
+h4{
+    font-size: 40px;
+}
+#yourCount{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#mainBoard{
+    position: relative;
+    width: 100vw;
+    background-color: blue;
+    height: auto;
+}
+.board{
+    position: absolute;
+    top: 0;
+    left: 120px;
+    right: 120px;
+
+}
+
+#board3,#board1,#board2,#board4,#board5,#board6,#board7{
+   transform: translateX(-500vw);
+}
+#board1.display, #board3.display,#board2.display,#board4.display,#board5.display,#board6.display,#board7.display{
+    animation : In 2.5s ease-in-out 1.5s 1 normal both;
+}
+#board1.noDisplay,#board3.noDisplay,#board2.noDisplay,#board4.noDisplay,#board5.noDisplay,#board6.noDisplay{
+    animation: Out 2s ease-in-out 0s 1 normal both
+}
+
+@keyframes In{
+   0%{
+    transform: translateX(-100vw); 
+   }
+   50%{
+    transform: translateX(10vw);
+   }
+   77%{
+    transform: translateX(-2vw);
+   }
+   100%{
+    transform: translateX(0vw);
+   }
+}
+
+ @keyframes Out{
+    0%{
+     transform: translateX(0vw); 
+    }
+    50%{
+     transform: translateX(2vw);
+    }
+    80%{
+     transform: translateX(-10vw);
+    }
+    100%{
+     transform: translateX(100vw);
+    }
+ }
+
+
+.disabled{
+    pointer-events: none;
+}
+
+footer{
+   margin-top: 60vh;
+}
+#restart{
+    background-color: rgba(255, 255, 255, 0.685);
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+#restart:hover{
+    background-color: rgb(255, 255, 255);
+}
+
+
+@media screen and (max-width:750px){
+    h3{
+        font-size: 20px;
+    }
+    h4{
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width:640px){
+    h3{
+        font-size: 20px;
+    }
+    h4{
+        font-size: 30px;
+    }
+    .answers{
+    flex-direction: column;
+    
+    }
+    .answer{
+    height: 30px;
+    position: relative;
+    }
+    footer{
+        margin-top: 600px;
+        padding-bottom: 20px;
+    }
+    h5{
+        position: absolute;
+        top: 83px;
+        left: 25px;
+        
+    }
+   
+    #board7{
+        margin-top: 100px;
+    }
+}
+
+@media screen and (max-width:560px){
+    h4{
+        font-size: 25px;
+    }
+  }
+
+@media screen and (max-width:470px){
+body{
+    overflow: hidden;
+}
+.board{
+    width: 80vw;
+    margin-left: -85px;
+    margin-right: 10px;
+}
+.answer{
+    height: 10px;
+    margin-top: -5px;
+}
+.answers{
+    margin-top:-15px;
+}
+  footer{
+    margin-top: 360px;
+ }
+ h1{
+    font-size: 30px;
+ }
+ h2{
+    font-size: 20px;
+    padding: 20px;
+    margin-top: -20px;
+}
+h3{
+    font-size: 15px;
+}
+h4{
+    font-size: 18px;
+}
+h5{
+    font-size: 20px;
+    border:2px solid;
+    border-radius: 50px;
+    min-width: 25px;
+    margin-right: 5px;
+    margin-top: -65px;
+    margin-left: -40px;
+    background-color: rgb(48, 40, 30); 
+}
+p{
+    font-size: 20px;
+}
+#restart{
+    height: 40px;
+}
+}
