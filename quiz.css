@@ -208,6 +208,7 @@ footer{
     border-radius: 5px;
     cursor: pointer;
     border: none;
+    margin;top:30px;
 }
 
 #restart:hover{
